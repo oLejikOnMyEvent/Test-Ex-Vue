@@ -19,27 +19,7 @@
     
     
 </template>
-<script>
 
-
-
-export default {
-  name: 'map',
-  data() {
-        },
-    mounted() {
-        document.body.onload = function () {
-    setTimeout(function () {
-        var preloader = document.getElementById('page-preloade');
-        if (!preloader.classList.contains('done')) {
-            preloader.classList.add('done');
-        }
-    }, 0);
-
-            }
-    },
-}
-</script>
 <style scope>
   .preloader {
     z-index: 2;
