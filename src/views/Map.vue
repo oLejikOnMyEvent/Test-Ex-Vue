@@ -1,8 +1,9 @@
 <template>
 <div>
   
-   <div id="page-preloader" class="preloader">
-    <div class="loader">  </div>
+    
+  
+    
 
 
  <b-embed
@@ -11,63 +12,57 @@
     src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa62e6bfc3fe32ab178add946ed360fbea17567eb61cf8075203f6e1d4c0fec9c&amp;source=constructor"
     allowfullscreen
   />
+  <div v-show="show" class="preloader">
 </div>
     
 
- 
-</div>
-    
-    
+   </div> 
+
+   
 </template>
 
 
 <script>
-//   document.body.onload = function () {
-//         setTimeout(function () {
-//             var preloader = document.getElementById('page-preloader');
-//             if (!preloader.classList.contains('done')) {
-//                 preloader.classList.add('done');
-//             }
-//         }, 0);
-//     }
-
 export default {
     name: "maps",
     data(){
         return{
-
+            show: true
         }
     },
     mounted() {
-        
-    }
+        this.showToggle();
+        },
+        methods: {
+            showToggle(){
+                setTimeout(()=>{
+                    this.show = false;
+                
+            }, 1000)
+        }
+        }
+    
 }
 </script>
 
 <style scope>
   .preloader {
-      padding-top:20px;
-    z-index: 2;
-    transition: 1s all;
-    opacity: 1;
-    visibility: visible;
-}
-.loader {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+    position: absolute;
     width: 50px;
     height: 50px;
-    border: 10px solid white;
-    border-radius: 50%;
+     border: 10px solid white;
+     z-index: 1;
+      border-radius: 50%;
     border-top-color: deepskyblue;
     left: 50%;
     top: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     animation: 0.5s spin infinite linear;
-}
-
-.preloader.done {
-    opacity: 0;
-    visibility: hidden;
 }
 
 @keyframes spin {
