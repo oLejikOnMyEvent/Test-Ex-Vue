@@ -2,7 +2,7 @@
 <div>
 
     <h1> Вы находитесь на сайте: </h1>
-        <span> {{sec}} Сенунд</span>
+        <span> {{sec}} Секунд</span>
         <span> {{min}} Минут</span>
         <span> {{hour}} Часов</span>
 

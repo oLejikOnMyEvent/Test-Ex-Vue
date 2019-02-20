@@ -20,16 +20,41 @@
     
 </template>
 
+
+<script>
+//   document.body.onload = function () {
+//         setTimeout(function () {
+//             var preloader = document.getElementById('page-preloader');
+//             if (!preloader.classList.contains('done')) {
+//                 preloader.classList.add('done');
+//             }
+//         }, 0);
+//     }
+
+export default {
+    name: "maps",
+    data(){
+        return{
+
+        }
+    },
+    mounted() {
+        
+    }
+}
+</script>
+
 <style scope>
   .preloader {
+      padding-top:20px;
     z-index: 2;
     transition: 1s all;
     opacity: 1;
     visibility: visible;
 }
 .loader {
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     border: 10px solid white;
     border-radius: 50%;
     border-top-color: deepskyblue;

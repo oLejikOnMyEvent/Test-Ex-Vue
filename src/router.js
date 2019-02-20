@@ -29,7 +29,7 @@ export default new Router({
     },
     {
       path: '/map',
-      name: 'map',
+      name: 'maps',
       component: Maps
     },
     {

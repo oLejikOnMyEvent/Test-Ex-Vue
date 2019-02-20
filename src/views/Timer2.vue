@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Вы находитесь на сайте</h1>
-    <span>{{timer_values}} Сенунд</span>
+    <span>{{timer_values}} Секунд</span>
     <span> Минут</span>
     <span> Часов</span>
     <div class="button">
